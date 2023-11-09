@@ -12,6 +12,8 @@ phases:
             - kubectl version --short --client
     pre_build:
         commands:
+            - echo -- who is the current IAM identity?
+            - aws sts get-caller-identity
             - echo Logging into Amazon EKS...
             - aws eks --region us-west-2 update-kubeconfig --name mk-c2-cluster201
             - echo check config
