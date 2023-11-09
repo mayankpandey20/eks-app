@@ -13,7 +13,7 @@ phases:
     pre_build:
         commands:
             - echo Logging into Amazon EKS...
-            - aws eks --region us-east-1 update-kubeconfig --name mk-c2-cluster201
+            - aws eks --region us-west-2 update-kubeconfig --name mk-c2-cluster201
             - echo check config
             - kubectl config view --minify
             - echo check kubectl access
